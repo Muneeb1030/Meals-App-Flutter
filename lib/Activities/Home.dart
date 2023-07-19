@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 import 'package:mealapp/DummyData.dart';
@@ -10,6 +12,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _mediaQuery = MediaQuery.of(context);
+    final _routeArgs =
+        ModalRoute.of(context)?.settings.arguments as Map<String, bool>;
+    final bool _isConnected = _routeArgs['connect'].toString() == 'true';
     final _appBar = AppBar(
       title: Text(
         "Categories",
@@ -28,7 +33,11 @@ class Home extends StatelessWidget {
           padding: const EdgeInsets.all(5),
           children: DUMMY_CATEGORIES
               .map((_data) => CategoryItem(
-                  Id: _data.id, Title: _data.title, colors: _data.color))
+                    Id: _data.id,
+                    Title: _data.title,
+                    colors: _data.color,
+                    isConnected: _isConnected,
+                  ))
               .toList(),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,

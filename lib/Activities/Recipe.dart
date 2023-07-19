@@ -8,16 +8,16 @@ class Recipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _recipeArgs =
+    final _routeArgs =
         ModalRoute.of(context)?.settings.arguments as Map<String, String>;
-    final _id = _recipeArgs['id'];
-    final _title = _recipeArgs['title'];
+    final bool _isConnected = _routeArgs['connect'].toString() == 'true';
+    final _id = _routeArgs['id'];
+    final _title = _routeArgs['title'];
     final _meals = DUMMY_MEALS.where(
       (element) {
         return element.categories.contains(_id);
       },
     ).toList();
-    print(_meals);
     final _mediaQuery = MediaQuery.of(context);
     final _appBar = AppBar(
       title: Text(
@@ -35,12 +35,14 @@ class Recipe extends StatelessWidget {
         itemCount: _meals.length,
         itemBuilder: (BuildContext context, int index) {
           return MealItem(
-              Id: _meals[index].id,
-              title: _meals[index].title,
-              imageUrl: _meals[index].imageUrl,
-              affordability: _meals[index].affordability,
-              complexity: _meals[index].complexity,
-              duration: _meals[index].duration);
+            Id: _meals[index].id,
+            title: _meals[index].title,
+            imageUrl: _meals[index].imageUrl,
+            affordability: _meals[index].affordability,
+            complexity: _meals[index].complexity,
+            duration: _meals[index].duration,
+            isConnected: _isConnected,
+          );
         },
       ),
     );

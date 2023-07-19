@@ -6,7 +6,12 @@ class CategoryItem extends StatelessWidget {
   final String Id;
   final String Title;
   final Color colors;
-  CategoryItem({required this.Id, required this.Title, required this.colors});
+  final bool isConnected;
+  CategoryItem(
+      {required this.Id,
+      required this.Title,
+      required this.colors,
+      required this.isConnected});
 
   void _selectedItem(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
@@ -14,6 +19,7 @@ class CategoryItem extends StatelessWidget {
       arguments: {
         'id': Id,
         'title': Title,
+        'connect': isConnected.toString(),
       },
     );
   }

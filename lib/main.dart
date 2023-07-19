@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mealapp/Activities/Home.dart';
 import 'package:mealapp/Activities/Loading.dart';
 import 'package:mealapp/Activities/Recipe.dart';
+import 'package:mealapp/Activities/RecipeDetails.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => Loading(),
         Home.routename: (context) => Home(),
         Recipe.routeName: (context) => Recipe(),
+        RecipeDetails.routeName: (context)=>RecipeDetails(),
       },
     );
   }
