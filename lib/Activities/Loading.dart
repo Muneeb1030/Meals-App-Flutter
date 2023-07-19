@@ -5,6 +5,7 @@ import 'package:connectivity/connectivity.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:mealapp/Activities/Home.dart';
+import 'package:mealapp/Activities/TabScreen.dart';
 
 class Loading extends StatefulWidget {
   const Loading({super.key});
@@ -30,7 +31,7 @@ class _LoadingState extends State<Loading> {
       Duration(seconds: 3),
       () {
         Navigator.of(context).pushReplacementNamed(
-          Home.routename,
+          TabScreen.routeName,
           arguments: {'connect': isConnected},
         );
       },

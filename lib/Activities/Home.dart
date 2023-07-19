@@ -15,18 +15,10 @@ class Home extends StatelessWidget {
     final _routeArgs =
         ModalRoute.of(context)?.settings.arguments as Map<String, bool>;
     final bool _isConnected = _routeArgs['connect'].toString() == 'true';
-    final _appBar = AppBar(
-      title: Text(
-        "Categories",
-        style: Theme.of(context).textTheme.titleMedium,
-      ),
-      backgroundColor: Theme.of(context).colorScheme.primary,
-    );
     final double _height = _mediaQuery.size.height -
-        _appBar.preferredSize.height -
+        //_appBar.preferredSize.height -
         _mediaQuery.padding.top;
     return Scaffold(
-      appBar: _appBar,
       body: Container(
         height: _height,
         child: GridView(
