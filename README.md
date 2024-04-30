@@ -1,16 +1,19 @@
-# mealapp
+# Meal Search App
+Welcome to our Meal Search App! This handy Flutter application assists you in discovering delicious meals from various categories. Whether you're craving something specific or exploring new culinary delights, our app has got you covered.
 
-A new Flutter project.
+## Features:
+**Filters**: Easily apply filters to narrow down your meal search according to your preferences.
 
-## Getting Started
+**Categories**: Browse through a menu of categories to select the perfect meal for any occasion.
 
-This project is a starting point for a Flutter application.
+**Favorites**: Mark your favorite meals for quick access and easy reference.
+## Concepts Learned:
 
-A few resources to get you started if this is your first Flutter project:
+**Filter Search**: Utilize filter search functionality to refine your meal search results based on specific criteria.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Marking Favorites**: Seamlessly mark your favorite meals within the app for future reference and quick retrieval.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**ListView Builder**: Harness the power of ListView Builder to efficiently display lists of meals, providing a smooth user experience while navigating through various options.
+
+## Contributing
+We welcome contributions from developers of all skill levels. Whether you're a seasoned Flutter developer or just starting out, there are plenty of opportunities to get involved. Feel free to fork our repository, make improvements, and submit pull requests. Together, we can make our Expense Manager App even better!
